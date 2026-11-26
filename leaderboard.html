@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="./assets/img/velocityx-logo.svg">
+<title>Places & Route Highlights — Jack Travels</title>
+<meta name="description" content="Explore Jack Travels locations, featured escapes, and ideas shared by recent travelers.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html" aria-label="Start">  <span>Jack Travels</span></a>
+    <div class="menu" data-nav-menu>
+      <a href="index.html" style='opacity:1;font-weight:800'>Start</a>
+      <a href="game.html">Route Builder</a>
+      <a href="leaderboard.html">Places</a>
+      <a href="about.html">Our Story</a>
+      <a href="blog.html">Ideas & Stories</a>
+      <a href="faq.html">Help</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+       
+    </div>
+    <div class="right"><a class="btn ghost" data-nav-toggle>Explore</a><a class="btn" href="game.html">Plan a Journey</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Places & Journey Highlights</h1>
+    <p>Suggested itineraries and notable journeys shared by the Jack Travels community.</p>
+  </div>
+</header>
+
+<section class="section container">
+  <div class="card">
+    <div id="lb">Preparing…</div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const el=document.getElementById('lb');
+  const lb=JSON.parse(localStorage.getItem('vx_leaderboard')||'[]');
+  if(!lb.length){
+    el.textContent='No journeys saved yet. Try a route and begin building your travel record!';
+    return;
+  }
+  const rows=lb.slice(0,50).map((r,i)=>
+    `<tr><td>#${i+1}</td><td>${r.score}</td><td>${new Day(r.at).toLocaleString()}</td></tr>`
+  ).join('');
+  el.innerHTML=`<table style="width:100%"><thead><tr><th>Place</th><th>Progress</th><th>Day</th></tr></thead><tbody>${rows}</tbody></table>`;
+})();
+</script>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div>© 2026 Jack Travels. Every right reserved.</div><div style="display:flex;gap:12px;align-items:center"><span class="badge">Jack Travels • Journeys</span></div></div>
+</footer><script src="assets/js/main.js"></script></body></html>

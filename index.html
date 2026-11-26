@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="./assets/img/velocityx-logo.svg">
+<title>Jack Travels — Explore the World with Purpose</title>
+
+<meta name="description" content="Browse handpicked escapes, adaptable travel plans, and enriching experiences from Jack Travels.">
+<meta property="og:title" content="Jack Travels — Journeys with Meaning Across the World">
+<meta property="og:description" content="Uncover standout destinations, practical route ideas, and fresh travel experiences with Jack Travels.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/img/velocityx-logo.svg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jack Travels — Travel Designed Around You">
+<meta name="twitter:description" content="Meet remarkable destinations, receive practical planning help, and explore firsthand stories with Jack Travels.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- ================= MOBILE NAV CSS ================= -->
+<style>
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* Desktop */
+.menu{
+  display:flex;
+  gap:18px;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+
+  .nav-toggle{
+    display:block;
+    color:#fff;
+  }
+
+  .right{
+    display:none;
+  }
+
+  .menu{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #0d1b2a;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    display: none;
+    z-index: 9999;
+  }
+
+  .menu a{
+    color:#fff;
+    font-size:16px;
+  }
+
+  /* ACTIVE STATE */
+  .menu.show{
+    display:flex;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+
+    <a class="logo" href="index.html">
+      <span>Jack Travels</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <!-- Explore -->
+    <div class="menu" id="navExplore">
+      <a href="index.html" style="opacity:1;font-weight:800">Start</a>
+      <a href="game.html">Route Builder</a>
+      <a href="leaderboard.html">Places</a>
+      <a href="about.html">Our Story</a>
+      <a href="blog.html">Ideas</a>
+      <a href="faq.html">Help</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="right">
+      <a class="btn" href="game.html">Plan a Journey</a>
+    </div>
+
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container grid">
+    <div>
+      <div class="badge">Jack Travels • World Destinations • Individual Adventures</div>
+      <h1>Discover the World Your Way with Jack Travels</h1>
+      <p>
+        Jack Travels brings your travel concepts to life through well-balanced itineraries, regional expertise,
+        practical preparation, and activities suited to every style of explorer.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="game.html">Start Exploring</a>
+        <a class="btn ghost" href="blog.html" style="color: #000;">Explore Traveler Stories</a>
+      </div>
+      <div class="kudos">
+        <span class="pill">✈️ Simple Preparation</span>
+        <span class="pill">🌍 Worldwide Choices</span>
+        <span class="pill">🗺️ Adaptable Itineraries</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="grid-2">
+        <div class="card">
+          <div class="stat">
+            <div class="n" >80+</div>
+            <div class="t" style="color: #fff;">Places to Discover</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stat">
+            <div class="n">6,000+</div>
+            <div class="t" style="color: #fff;">Travelers Served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section container">
+  <h2>Why Choose Jack Travels</h2>
+  <p style="max-width:720px;margin:0 auto 32px;opacity:0.8">
+    Our approach combines tailored routes, distinctive locations, and on-the-ground knowledge to craft
+    trips that are memorable, not exhausting.
+  </p>
+
+  <div class="grid-2" style="margin-bottom:48px">
+    <div class="card" style="color: #fff;">
+      <h3>✓ Journeys for Every Season</h3>
+      <p>Discover rewarding escapes throughout the year, from your first overseas adventure to a new chapter of familiar travel.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🌟 Exceptional Routes</h3>
+      <p>Select from popular journeys and carefully timed departures that highlight each destination at its finest.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🐟 Immersive Cultural Moments</h3>
+      <p>Join workshops and cultural experiences hosted by informed local people who know their home inside out.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🎉 Travel with a Personal Focus</h3>
+      <p>Adjust every stage to match your hobbies, pace, travel companions, and preferred way of moving through the world.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section container">
+  <div class="card">
+    <h2 style="color: #fff; text-align: center;">Map Out Your Next Adventure</h2>
+
+    <form id="contact-form" style="max-width:720px;margin:24px auto 0;text-align:left">
+      <div class="form-row">
+        <div>
+          <label style="color: #fff;">Your Name</label>
+          <input name="name" required placeholder="Add your name">
+        </div>
+        <div>
+          <label style="color: #fff;">Email Address</label>
+          <input name="email" required type="email" placeholder="you@example.com">
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div>
+        <label style="color: #fff;">Describe the journey you have in mind</label>
+        <textarea name="message" rows="4"></textarea>
+      </div>
+
+      <div style="height:18px"></div>
+      <button class="btn" type="submit">Send Your Request</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© 2026 Jack Travels. Every right reserved.</div>
+    <div>
+      <span class="badge">Jack Travels • Itineraries • Inspiration</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+<!-- ============ MOBILE NAV SCRIPT ============ -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const mobileToggleBtn = document.getElementById("navToggle");
+  const mobileExploreBox  = document.getElementById("navExplore");
+
+  if(!mobileToggleBtn || !mobileExploreBox) return;
+
+  mobileToggleBtn.addEventListener("click", function(){
+    mobileExploreBox.classList.toggle("show");
+  });
+
+  // auto-close after click
+  mobileExploreBox.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("click", ()=>{
+      mobileExploreBox.classList.remove("show");
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>
